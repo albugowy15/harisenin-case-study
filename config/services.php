@@ -14,6 +14,17 @@ return [
     |
     */
 
+    'cloudinary' => [
+        'cloud' => [
+            'cloud_name' => env('CLOUDINARY_NAME'), 
+            'api_key' => env('CLOUDINARY_API_KEY'), 
+            'api_secret' => env('CLOUDINARY_API_SECRET')
+        ],
+        'url' => [
+            'secure' => true
+        ]
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
