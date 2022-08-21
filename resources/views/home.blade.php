@@ -17,11 +17,11 @@
             </ul>
         </nav>
     </header>
-    <main class="container py-5 px-6">
+    <main class="container py-5 mx-auto">
         <h2 class="font-bold text-3xl">Categories</h2>
-        <div class="grid grid-cols-4 gap-3 mt-4">
+        <div class="grid grid-cols-4 grid-rows-1 overflow-scroll gap-3 mt-4">
             @foreach ($categories as $item)
-            <div class="relative bg-pink-500">
+            <div class="relative bg-pink-500 overflow-hidden">
                 <div class="absolute z-10 bg-black bg-opacity-60 w-full h-full">
                     <div class="h-full flex flex-col items-center justify-center">
                         <p class="text-white text-center text-lg font-bold">{{$item->category_name}}</p>
@@ -35,9 +35,20 @@
         </div>
         <div class="py-8"/>
         <h2 class="font-bold text-3xl">Products</h2>
-        <div class="grid grid-cols-4 gap-3 mt-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4 mx-auto">
             @foreach ($products as $item)
-            
+     
+            <div class="bg-slate-200 rounded shadow w-auto overflow-hidden">
+                <div class="h-40 overflow-hidden w-full object-cover">
+                    <img src={{$item->product_asset->first()->asset->path}} class="object-cover" width="400"/>
+                </div>
+                <div class="p-3">
+
+                    <p class="font-bold text-lg">{{$item->product_name}}</p>
+                    <p class="text-sm py-2 text-slate-600">{{$item->description}}</p>
+                    <p>Harga : Rp {{$item->price}}</p>
+                </div>
+            </div>
             @endforeach
         </div>
 

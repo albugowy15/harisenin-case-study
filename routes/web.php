@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Asset;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
         'categories' => Category::all(),
-        'products' => Product::all()
+        'products' => Product::all(),
+        'assets' => Asset::all()
     ]);
 });

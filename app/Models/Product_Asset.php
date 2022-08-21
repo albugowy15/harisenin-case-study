@@ -23,11 +23,11 @@ class Product_Asset extends Model
 
     public function product()
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsTo(Product::class);
     }
 
     public function asset()
     {
-        return $this->hasMany(Asset::class);
+        return $this->belongsTo(Asset::class);
     }
 }
