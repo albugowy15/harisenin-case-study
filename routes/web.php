@@ -31,3 +31,12 @@ Route::get('/products/{slug}', function ($slug) {
         'product' => Product::where('product_slug', $slug)->first()
     ]);
 });
+
+Route::get('/categories/{slug}', function ($slug) {
+    $category = Category::where('category_slug', $slug)->first();
+    return view('categories', [
+        'slug' => $slug,
+        'title' => Category::where('category_slug', $slug)->first()->category_name,
+        'products' => $category->product,
+    ]);
+});
