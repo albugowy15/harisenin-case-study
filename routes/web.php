@@ -23,3 +23,11 @@ Route::get('/', function () {
         'assets' => Asset::all()
     ]);
 });
+
+Route::get('/products/{slug}', function ($slug) {
+    return view('product', [
+        'slug' => $slug,
+        'title' => Product::where('product_slug', $slug)->first()->product_name,
+        'product' => Product::where('product_slug', $slug)->first()
+    ]);
+});
