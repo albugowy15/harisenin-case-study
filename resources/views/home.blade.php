@@ -24,7 +24,7 @@
             <div class="relative bg-pink-500 overflow-hidden">
                 <div class="absolute z-10 bg-black bg-opacity-60 w-full h-full">
                     <div class="h-full flex flex-col items-center justify-center">
-                        <p class="text-white text-center text-lg font-bold">{{$item->category_name}}</p>
+                        <p class="text-white text-center text-lg font-bold"><a href={{"categories/$item->category_slug"}}>{{$item->category_name}}</a></p>
                     </div>
                 </div>
                 <div class="relative object-fill">
@@ -46,7 +46,7 @@
 
                     <p class="font-bold text-lg"><a href={{"products/$item->product_slug"}}>{{$item->product_name}}</a></p>
                     <p class="text-sm py-2 text-slate-600">{{$item->description}}</p>
-                    <p>Harga : Rp {{$item->price}}</p>
+                    <p>Harga : @currency($item->price)</p>
                 </div>
             </div>
             @endforeach

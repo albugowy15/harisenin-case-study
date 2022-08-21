@@ -17,7 +17,7 @@
 
         <h1 class="font-bold text-3xl mt-5">{{$product->product_name}}</h1>
         <p class="text-lg py-3">{{$product->description}}</p>
-        <p class="text-xl">Rp {{$product->price}},00</p>
+        <p class="text-xl">@currency($product->price)</p>
         <div class="flex flex-wrap gap-2">
             @foreach($product->product_asset as $item)
                 <img src={{$item->asset->path}} alt="" width="200">
