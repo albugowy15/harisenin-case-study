@@ -8,10 +8,10 @@
     <title>{{$title}}</title>
 </head>
 <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-5">
         <div class="bg-blue-500 w-fit p-2 rounded-lg text-white mt-3">
 
-            <p class="font-bold"><a href="/" class="hover:cursor-pointer">&#8592 Back To Home</a></p>
+            <p class="font-bold"><a href="/" class="hover:cursor-pointer">&#8592; Back To Home</a></p>
 
         </div>
         <h1 class="text-center font-bold text-xl mt-5 text-black">Menampilkan semua produk dengan kategori {{$title}}</h1>

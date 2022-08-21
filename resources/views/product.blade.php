@@ -8,11 +8,9 @@
     <title>{{$title}}</title>
 </head>
 <body>
-    <div class="container mx-auto">
+    <div class="container px-5 mx-auto">
         <div class="bg-blue-500 w-fit p-2 rounded-lg text-white mt-3">
-
             <p class="font-bold"><a href="/" class="hover:cursor-pointer">&#8592 Back To Home</a></p>
-
         </div>
 
         <h1 class="font-bold text-3xl mt-5">{{$product->product_name}}</h1>
