@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Asset;
+use App\Models\Product;
 
 class Category extends Model
 {
@@ -24,5 +25,10 @@ class Category extends Model
     public function asset()
     {
         return $this->belongsTo(Asset::class);
+    }
+
+    public function product()
+    {
+        return $this->hasMany(Product::class);
     }
 }
